@@ -1,0 +1,54 @@
+// ===
+//
+// MG.css - Reset
+//
+// ===
+
+@if $global-box-sizing == true
+  *
+    &,
+    &:before,
+    &:after
+      @include vendor(box-sizing, border-box)
+
+
+@if $global-text-rendering == true
+  *
+    text-rendering: optimizeLegibility
+
+*
+  -webkit-font-smoothing: antialiased
+
+//
+// Remove browser margin's and padding's
+//
+
+h1,h2,h3,h4,h5,h6,
+p,blockquote,pre,
+dl,dd,ul,ol,form,
+fieldset,legend,
+table,th,td,caption,hr
+  margin: 0
+  padding: 0
+
+//
+// Remove text decoration (underlines)
+//
+
+a,u,ins
+  text-decoration: none
+
+//
+// Style alt text for images that don't load
+//
+
+img
+  font-style: italic
+
+//
+// Form element cursor's
+//
+
+label,input,textarea,
+button,select,option
+  cursor: pointer

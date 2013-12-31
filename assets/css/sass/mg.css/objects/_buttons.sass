@@ -1,0 +1,57 @@
+// ===
+//
+// MG.css - Buttons
+//
+// ===
+
+@if $use-buttons == true
+  .button
+    display: inline-block
+    vertical-align: middle
+    white-space: nowrap
+    font-family: inherit
+    font-size: 100%
+    cursor: pointer
+    border:none
+    margin: 0
+    padding: 0 1em
+    border-radius: $base-radius
+    line-height: 3
+    &,&:hover
+      text-decoration: none
+    &:active, &:focus
+      outline: none
+
+  .button--small
+    padding-left: 0.5em
+    padding-right: 0.5em
+    line-height: 2
+
+  .button--large
+    padding-left: 1.5em
+    padding-right: 1.5em
+    line-height: 4
+
+  .button--huge
+    padding-left: 2em
+    padding-right: 2em
+
+  .button--full
+    width: 100%
+    padding-left: 0
+    padding-right: 0
+    text-align: center
+
+  .button__font--large
+    @include font-size(30)
+
+  .button__font--medium
+    @include font-size(20)
+
+  .button__font--small
+    @include font-size(10)
+
+  .button--wrap
+    white-space: normal
+
+

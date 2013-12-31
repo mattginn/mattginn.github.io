@@ -1,0 +1,23 @@
+// ===
+//
+// MG.css - Main
+//
+// ===
+
+html, body
+  position: relative
+
+html
+  min-height: 100%
+  overflow-y: scroll
+  font-family: $base-font-face
+  font-weight: $base-font-weight
+  @if $use-rem == true
+    font-size: 62.5%
+  @else
+    font-size: $base-font-size + "px"
+
+
+@if $use-rem == true
+  div, p, li
+    @include font-size($base-font-size)

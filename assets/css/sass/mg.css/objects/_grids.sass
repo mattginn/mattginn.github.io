@@ -1,0 +1,23 @@
+// ===
+//
+// MG.css - Grids
+//
+// ===
+
+.grid
+  margin-bottom: 0
+  list-style: none
+  @extend .cf
+  padding-right: $base-spacing-unit
+
+.grid > .grid
+  margin-left: 0
+
+.grid__item
+  display: block
+  float: left
+  width: 100%
+  padding-left: $base-spacing-unit
+  vertical-align: top
+  @if $global-box-sizing == false
+    @include vendor(box-sizing, border-box)

@@ -1,0 +1,165 @@
+// ===
+//
+// MG.css - Mixins
+//
+// ===
+
+//
+// Vendor Prefixing
+//
+
+@mixin vendor($property, $value...)
+  -webkit-#{$property}: $value
+  -moz-#{$property}: $value
+  -ms-#{$property}: $value
+  -o-#{$property}: $value
+  #{$property}: $value
+
+//
+// Transition
+//
+
+@mixin transition($transition-type: all, $transition-duration: 0.20s, $transition-ease: ease-out)
+  -webkit-transition: $transition-type $transition-duration $transition-ease
+  -moz-transition: $transition-type $transition-duration $transition-ease
+  -ms-transition: $transition-type $transition-duration $transition-ease
+  -o-transition: $transition-type $transition-duration $transition-ease
+  transition: $transition-type $transition-duration $transition-ease
+
+//
+// Keyframe's
+//
+
+@mixin keyframe($keyframe-animation-name)
+  @-webkit-keyframes #{$keyframe-animation-name}
+    @content
+  @-moz-keyframes #{$keyframe-animation-name}
+    @content
+  @-ms-keyframes #{$keyframe-animation-name}
+    @content
+  @-o-keyframes #{$keyframe-animation-name}
+    @content
+  @keyframes #{$keyframe-animation-name}
+    @content
+
+//
+// Truncate text
+//
+
+@mixin truncate($truncation-width)
+  max-width: $truncation-width
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+
+//
+// Hyphens
+//
+
+@mixin hyphens
+  ms-word-break: break-all
+  word-break: break-all
+  word-wrap: break-word
+  @include vendor(hyphens, auto)
+
+//
+// Linear Gradient
+//
+
+@mixin gradient($gradient-from, $gradient-to)
+  background-color: $gradient-from
+  background-image: -moz-linear-gradient($gradient-from, $gradient-to)
+  background-image: -webkit-gradient(linear, 0% 0% 0% 100%, from($gradient-from), to($gradient-to))
+  background-image: -webkit-linear-gradient($gradient-from, $gradient-to)
+  background-image: -ms-linear-gradient($gradient-from, $gradient-to)
+  background-image: -o-linear-gradient($gradient-from, $gradient-to)
+
+//
+// Radial Gradient
+//
+
+@mixin rad($rad-from, $rad-to)
+  background-image: -webkit-gradient(radial, 50% 50%,0,50% 50%,200, from($rad-from), to($rad-to))
+  background-image: -webkit-radial-gradient(50% 50%, $rad-to, $rad-from)
+  background-image: -moz-radial-gradient(50% 50%, $rad-to, $rad-from)
+  background-image: -o-radial-gradient(50% 50%, $rad-to, $rad-from)
+  background-image: -ms-radial-gradient(50% 50%, $rad-to, $rad-from)
+  background-image: radial-gradient(50% 50%, $rad-to, $rad-from)
+
+//
+// Backface Visibility
+//
+
+@mixin wbf
+  -webkit-backface-visibility: hidden!important
+
+//
+// Placeholder Text Colour
+//
+
+@mixin placeholder($placeholder-color)
+  &::-webkit-input-placeholder
+    color: $placeholder-color
+  &::-moz-placeholder
+    color: $placeholder-color
+  &:-moz-placeholder
+    color: $placeholder-color
+  &:-ms-input-placeholder
+    color: $placeholder-color
+
+//
+// Retina Background Image's
+// Image width and Image height refer to the @1x image dimension's
+//
+
+@mixin image2x($image, $image-width, $image-height)
+  @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6/2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx)
+    background-image: $image
+    background-size: $image-width $image-height
+
+//
+// Font Size
+//
+// font-size defined in px size eg @include font-size(14)
+//
+
+@mixin font-size($size: 1.6, $line-height: $size * 1.5)
+  font-size: $size + px
+  line-height: $line-height + px
+  font-size: ($size / 10) + rem
+  line-height: ($line-height / 10) + rem
+
+
+//
+// Media Query
+//
+
+$palm-end: $lap-start - 1
+$lap-end: $desktop-start - 1
+
+@mixin media-query($media-query)
+
+  @if $media-query == palm
+    @media only screen and (max-width:$palm-end)
+      @content
+
+  @if $media-query == lap
+    @media only screen and (min-width:$lap-start) and (max-width:$lap-end)
+      @content
+
+  @if $media-query == lap-and-up
+    @media only screen and (min-width:$lap-start)
+      @content
+
+  @if $media-query == portable
+    @media only screen and (max-width:$lap-end)
+      @content
+
+  @if $media-query == desktop
+    @media only screen and (min-width: $desktop-start)
+      @content
+
+  @if $media-query == desktop-wide
+    @media only screen and (min-width: $desktop-wide-start)
+      @content
+

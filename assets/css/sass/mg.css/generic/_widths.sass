@@ -1,0 +1,194 @@
+// ===
+//
+// MG.css - Widths
+//
+// ===
+
+@mixin grid-config($device: "")
+  //
+  // Whole
+  //
+
+  .#{$device}one-whole
+    width: 100%
+
+  //
+  // Halves
+  //
+
+  .#{$device}one-half
+    width: 50%
+
+  //
+  // Thirds
+  //
+
+  .#{$device}one-third
+    width: 33.333%
+
+  .#{$device}two-thirds
+    width: 66.666%
+
+  //
+  // Quarters
+  //
+
+  .#{$device}one-quarter
+    width: 25%
+
+  .#{$device}two-quarters
+    @extend .#{$device}one-half
+
+  .#{$device}three-quarters
+    width: 75%
+
+  //
+  // Fifths
+  //
+
+  .#{$device}one-fifth
+    width: 20%
+
+  .#{$device}two-fifths
+    width: 40%
+
+  .#{$device}three-fifths
+    width: 60%
+
+  .#{$device}four-fifths
+    width: 80%
+
+  //
+  // Sixths
+  //
+
+  .#{$device}one-sixth
+    width: 16.666%
+
+  .#{$device}two-sixths
+    @extend .#{$device}one-third
+
+  .#{$device}three-sixths
+    @extend .#{$device}one-half
+
+  .#{$device}four-sixths
+    @extend .#{$device}two-thirds
+
+  .#{$device}five-sixths
+    width: 83.333%
+
+  //
+  // Eighths
+  //
+
+  .#{$device}one-eighth
+    width: 12.5%
+
+  .#{$device}two-eighths
+    @extend .#{$device}one-quarter
+
+  .#{$device}three-eighths
+    width: 37.5%
+
+  .#{$device}four-eighths
+    @extend .#{$device}one-half
+
+  .#{$device}five-eighths
+    width: 62.5%
+
+  .#{$device}six-eighths
+    @extend .#{$device}three-quarters
+
+  .#{$device}seven-eighths
+    width: 87.5%
+
+  //
+  // Tenths
+  //
+
+  .#{$device}one-tenth
+    width: 10%
+
+  .#{$device}two-tenths
+    @extend .#{$device}one-fifth
+
+  .#{$device}three-tenths
+    width: 30%
+
+  .#{$device}four-tenths
+    @extend .#{$device}two-fifths
+
+  .#{$device}five-tenths
+    @extend .#{$device}one-half
+
+  .#{$device}six-tenths
+    @extend .#{$device}three-fifths
+
+  .#{$device}seven-tenths
+    width: 70%
+
+  .#{$device}eight-tenths
+    @extend .#{$device}four-fifths
+
+  .#{$device}nine-tenths
+    width: 90%
+
+  //
+  // Twelfths
+  //
+
+  .#{$device}one-twelfth
+    width: 8.333%
+
+  .#{$device}two-twelfths
+    @extend .#{$device}one-sixth
+
+  .#{$device}three-twelfths
+    @extend .#{$device}one-quarter
+
+  .#{$device}four-twelfths
+    @extend .#{$device}one-third
+
+  .#{$device}five-twelfths
+    width: 41.666%
+
+  .#{$device}six-twelfths
+    @extend .#{$device}one-half
+
+  .#{$device}seven-twelfths
+    width: 58.333%
+
+  .#{$device}eight-twelfths
+    @extend .#{$device}two-thirds
+
+  .#{$device}nine-twelfths
+    @extend .#{$device}three-quarters
+
+  .#{$device}ten-twelfths
+    @extend .#{$device}five-sixths
+
+  .#{$device}eleven-twelfths
+    width: 91.666%
+
+
+@include grid-config()
+
+@if $use-responsive == true
+
+  @include media-query(palm)
+    @include grid-config("palm-")
+
+  @include media-query(lap)
+    @include grid-config("lap-")
+
+  @include media-query(lap-and-up)
+    @include grid-config("lap-and-up-")
+
+  @include media-query(portable)
+    @include grid-config("portable-")
+
+  @include media-query(desktop)
+    @include grid-config("desktop-")
+
+  @include media-query(desktop-wide)
+    @include grid-config("desktop-wide-")

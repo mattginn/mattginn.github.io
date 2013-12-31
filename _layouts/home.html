@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" class="home-page no-overflow">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{{ page.excerpt }}" />
+  <meta name="viewport" content="width=device-width">
+
+  <!-- OGP Stuff -->
+  <meta property="og:title" content="{{ page.title }}" />
+  <meta property="og:description" content="{{ page.excerpt }}" />
+  <meta property="og:image" content="{{ page.thumb }}" />
+  <meta property="og:url" content="{{ page.url }}" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@_mginn" />
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:description" content="{{ page.excerpt }}" />
+  <meta name="twitter:creator" content="@_mginn" />
+  <meta name="twitter:image" content="{{ page.thumb }}" />
+
+  <!-- Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Average' rel='stylesheet' type='text/css'>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/site.min.css" />
+
+</head>
+<body>
+  <ul id="main-nav" class="nav nav--center">
+    <li><a href="http://twitter.com/_mginn">TWITTER</a></li>
+    <li id="nav-logo"><a href="/" class="logo"></a></li>
+    <li><a href="mailto:hello@mattginn.me?subject=Hello">CONTACT</a></li>
+  </ul>
+  {{ content }}
+</body>
+</html>
