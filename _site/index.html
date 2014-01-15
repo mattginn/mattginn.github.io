@@ -22,6 +22,7 @@
   <meta name="twitter:creator" content="@_mginn" />
   <meta name="twitter:image" content="" />
 
+
   <!-- Fonts -->
   <link href='http://fonts.googleapis.com/css?family=Average' rel='stylesheet' type='text/css'>
 
@@ -30,6 +31,7 @@
 
 </head>
 <body>
+
   <ul id="main-nav" class="nav nav--center">
     <li><a href="http://twitter.com/_mginn" target="_blank">TWITTER</a></li>
     <li><a href="https://github.com/mattginn" target="_blank">GITHUB</a></li>
@@ -37,6 +39,8 @@
     <li><a href="enquire@mattginn.me">EMAIL</a></li>
     <li><a href="skype:m.ginn?add">SKYPE</a></li>
   </ul>
+
+
   <div class="cover-bg-wrap cover-bg-wrap--one">
   <div id="p-head" class="cover-heading cover-heading--home">
     <div class="cover-heading__content">
@@ -48,6 +52,17 @@
   </div>
 </div>
 
+
   <script src="assets/js/ga.js"></script>
+  <script>
+    var img = new Image();
+    img.onload = function() {
+      setTimeout(function() {
+        document.body.className += 'bg-load';
+      }, 300);
+      img.parentNode.removeChild(img);
+    };
+    img.src = window.location.origin + '/assets/img/homebgtop.jpg';
+  </script>
 </body>
 </html>
