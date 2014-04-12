@@ -1,0 +1,322 @@
+// ===
+//
+// Mattginn.me Home page
+//
+// ===
+
+html
+  background-color: #fff
+
+p
+  color: #fff
+
+body
+  @include transition
+
+html, body
+  width: 100%
+  height: 100%
+
+.no-overflow
+  overflow: hidden!important
+
+//
+// Headings
+//
+
+@for $i from 1 through 6
+  h#{$i}
+    font-family: $heading-font-face
+    font-weight: 300
+    color: #000
+    margin-bottom: $base-spacing-unit
+
+//
+// Font Setup
+//
+
+html, body
+  color: #404040
+
+//
+// Logo
+//
+
+$logo-dot-dimension: 20px
+$logo-spacing-unit: $logo-dot-dimension / 2
+$logo-dot-bg: rgba(#f9f9f9, 0.1)
+$logo-dot-bg-active: #fff
+
+.logo
+  width: ($logo-dot-dimension * 5) + ($logo-spacing-unit * 4)
+  display: inline-block
+  @include transition
+
+
+  .row
+    height: $logo-dot-dimension
+    &:not(:last-child)
+      margin-bottom: $logo-spacing-unit
+
+    span
+      width: $logo-dot-dimension
+      height: $logo-dot-dimension
+      border-radius: $logo-dot-dimension / 2
+      background: $logo-dot-bg
+      display: block
+      float: left
+      @include transition($transition-duration: 0.3s)
+      @include vendor(animation, none)
+      &:not(:last-child)
+        margin-right: $logo-spacing-unit
+
+  &.load--m
+    .row
+      &:first-child
+        span
+          &:first-child
+            @include vendor(animation, mLoad 1.3s 1.4s forwards ease)
+          &:last-child
+            @include vendor(animation, mLoad 1.3s 1.8s forwards ease)
+      &:nth-child(2)
+        span
+          &:first-child
+            @include vendor(animation, mLoad 1.3s 1.3s forwards ease)
+          &:nth-child(2)
+            @include vendor(animation, mLoad 1.3s 1.5s forwards ease)
+          &:nth-child(4)
+            @include vendor(animation, mLoad 1.3s 1.7s forwards ease)
+          &:last-child
+            @include vendor(animation, mLoad 1.3s 1.9s forwards ease)
+      &:nth-child(3)
+        span
+          &:first-child
+            @include vendor(animation, mLoad 1.3s 1.2s forwards ease)
+          &:nth-child(3)
+            @include vendor(animation, mLoad 1.3s 1.6s forwards ease)
+          &:last-child
+            @include vendor(animation, mLoad 1.3s 2s forwards ease)
+      &:nth-child(4)
+        span
+          &:first-child
+            @include vendor(animation, mLoad 1.3s 1.1s forwards ease)
+          &:last-child
+            @include vendor(animation, mLoad 1.3s 2.1s forwards ease)
+      &:last-child
+        span
+          &:first-child
+            @include vendor(animation, mLoad 1.3s 1s forwards ease)
+          &:last-child
+            @include vendor(animation, mLoad 1.3s 2.2s forwards ease)
+
+
+  &.load--g
+    .row
+      &:first-child
+        span
+          &:first-child
+            @include vendor(animation, mLoad 1.3s 0.4s forwards ease)
+          &:nth-child(2)
+            @include vendor(animation, mLoad 1.3s 0.3s forwards ease)
+          &:nth-child(3)
+            @include vendor(animation, mLoad 1.3s 0.2s forwards ease)
+          &:nth-child(4)
+            @include vendor(animation, mLoad 1.3s 0.1s forwards ease)
+          &:last-child
+            @include vendor(animation, mLoad 1.3s 0s forwards ease)
+      &:nth-child(2)
+        span
+          &:first-child
+            @include vendor(animation, mLoad 1.3s 0.5s forwards ease)
+      &:nth-child(3)
+        span
+          &:first-child
+            @include vendor(animation, mLoad 1.3s 0.6s forwards ease)
+          &:nth-child(3)
+            @include vendor(animation, mLoad 1.3s 1.6s forwards ease)
+          &:nth-child(4)
+            @include vendor(animation, mLoad 1.3s 1.5s forwards ease)
+          &:last-child
+            @include vendor(animation, mLoad 1.3s 1.4s forwards ease)
+      &:nth-child(4)
+        span
+          &:first-child
+            @include vendor(animation, mLoad 1.3s 0.7s forwards ease)
+          &:last-child
+            @include vendor(animation, mLoad 1.3s 1.3s forwards ease)
+      &:last-child
+        span
+          &:first-child
+            @include vendor(animation, mLoad 1.3s 0.8s forwards ease)
+          &:nth-child(2)
+            @include vendor(animation, mLoad 1.3s 0.9s forwards ease)
+          &:nth-child(3)
+            @include vendor(animation, mLoad 1.3s 1s forwards ease)
+          &:nth-child(4)
+            @include vendor(animation, mLoad 1.3s 1.1s forwards ease)
+          &:last-child
+            @include vendor(animation, mLoad 1.3s 1.2s forwards ease)
+
+  &.logo--m
+    .row
+      &:first-child
+        span
+          &:first-child
+            background: $logo-dot-bg-active
+          &:last-child
+            background: $logo-dot-bg-active
+      &:nth-child(2)
+        span
+          &:first-child
+            background: $logo-dot-bg-active
+          &:nth-child(2)
+            background: $logo-dot-bg-active
+          &:nth-child(4)
+            background: $logo-dot-bg-active
+          &:last-child
+            background: $logo-dot-bg-active
+      &:nth-child(3)
+        span
+          &:first-child
+            background: $logo-dot-bg-active
+          &:nth-child(3)
+            background: $logo-dot-bg-active
+          &:last-child
+            background: $logo-dot-bg-active
+      &:nth-child(4)
+        span
+          &:first-child
+            background: $logo-dot-bg-active
+          &:last-child
+            background: $logo-dot-bg-active
+      &:last-child
+        span
+          &:first-child
+            background: $logo-dot-bg-active
+          &:last-child
+            background: $logo-dot-bg-active
+    &:hover
+      cursor: pointer
+      .row
+        &:first-child
+          span
+            &:first-child, &:last-child
+              background: $logo-dot-bg
+            &:nth-child(3)
+              background: $logo-dot-bg-active
+        &:nth-child(2)
+          span
+            &:nth-child(2), &:nth-child(4)
+              background: $logo-dot-bg-active
+            &:first-child, &:last-child
+              background: $logo-dot-bg
+        &:nth-child(3), &:nth-child(4)
+          span
+            &:first-child, &:last-child
+              background: $logo-dot-bg-active
+            &:nth-child(3)
+              background: $logo-dot-bg
+        &:last-child
+          span
+            background: $logo-dot-bg-active
+
+@include keyframe(mLoad)
+  0%
+    background: $logo-dot-bg
+  100%
+    background: $logo-dot-bg-active
+
+@include keyframe(sLoad)
+  0%
+    background: $logo-dot-bg
+  100%
+    background: $logo-dot-bg-active
+
+.content
+  margin: 0 auto
+  max-width: 700px
+  border-bottom: 1px solid #eeeeee
+  background: #fff
+  padding: 40px 0
+
+.main-image--one
+  background: url(/i/bg.jpg) no-repeat center
+
+.main-image
+  position: relative
+  background: #3D464D
+  -webkit-perspective: 800
+  -webkit-transform-style: preserve-3d
+  -webkit-backface-visibility: hidden
+
+  h1
+    @include font-size($h2-size, false)
+    text-align: center
+    margin: 20px 0 0
+    color: #fff
+    width: 100%
+
+.main-image--over
+  width: 100%
+  height: 100%
+  position: relative
+  overflow: hidden
+
+.main-image__inner
+  width: 110%
+  height: 110%
+  position: relative
+  @include vendor(background-size, cover)
+  -webkit-transform-origin: 50%
+  -webkit-transform-style: preserve-3d
+  -webkit-backface-visibility: hidden
+  &:after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(#3D464D,0.9)
+
+
+.content-top
+  position: absolute
+  top: 50%
+  left: 50%
+  @include vendor(transform, translateY(-50%) translateX(-50%))
+  text-align: center
+  @include media-query(palm)
+    width: 100%
+
+.button--border
+  border: 2px solid #fff
+  color: #fff
+  @include transition
+  &:hover, &:active
+    @include vendor(box-shadow, inset 0 0 0 50px #fff)
+    color: #000
+
+.footer-links
+  position: absolute
+  right: 0
+  left: 0
+  bottom: $base-spacing-unit
+  z-index: 10
+
+  ul
+    > li
+      &:not(:last-child)
+        margin-right: $base-spacing-unit
+      a
+        color: #fff
+        @include font-size(12)
+        @include transition
+        &:hover, &:active
+          color: #fff
+
+#contone
+  p, .button
+    margin-top: $base-spacing-unit
+    @include media-query(palm)
+      margin-top: $base-spacing-unit / 2

@@ -2,7 +2,7 @@ namespace :sass do
   file = ENV['file'] || 'site'
   type = ENV['type'] || 'sass'
 
-  str = "assets/css/sass/#{file}.#{type}:assets/css/#{file}.min.css --style compressed"
+  str = "css/sass/#{file}.#{type}:css/#{file}.min.css --style compressed"
 
   task :watch => [:update] do
     system "sass --watch #{str}"

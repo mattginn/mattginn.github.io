@@ -1,6 +1,0 @@
-name: Mattginn.me
-markdown: redcarpet
-pygments: true
-permalink: /:year/:month/:title
-paginate: 10
-

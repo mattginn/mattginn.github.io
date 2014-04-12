@@ -1,16 +1,89 @@
----
-layout: home
-title: Matt Ginn - Freelance Front End Developer based in UK
-excerpt: Freelance front end developer based in the UK.
----
+<!DOCTYPE html>
+<html lang="en" class="home-page">
+<head>
 
-<div class="cover-bg-wrap cover-bg-wrap--one">
-  <div id="p-head" class="cover-heading cover-heading--home">
-    <div class="cover-heading__content">
-      <h1>Matt Ginn</h1>
-      <p>Front End Web Developer based in the UK</p>
-      <p>I am available for remote freelance / contract work from January 2014</p>
-      <a href="mailto:enquire@mattginn.me" class="button button--home-cta">Hire me!</a>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Matt Ginn - Front End Web Developer | Freelancer | Available for hire</title>
+  <meta name="description" content="{{ page.excerpt }}" />
+  <meta name="viewport" content="width=device-width">
+
+  <!-- OGP Stuff -->
+  <meta property="og:title" content="{{ page.title }}" />
+  <meta property="og:description" content="{{ page.excerpt }}" />
+  <meta property="og:image" content="{{ page.thumb }}" />
+  <meta property="og:url" content="{{ page.url }}" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@_mginn" />
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:description" content="{{ page.excerpt }}" />
+  <meta name="twitter:creator" content="@_mginn" />
+  <meta name="twitter:image" content="{{ page.thumb }}" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/site.min.css" />
+
+</head>
+<body>
+
+<div class="main-image main-image--over">
+  <div id="one" class="main-image__inner main-image--one"></div>
+  <div id="contone" class="content-top">
+    <div id="logo" class="logo load--m">
+      <div class="row">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div class="row">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div class="row">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div class="row">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div class="row">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
     </div>
+    <h1>Front End Developer</h1>
+    <p>Available for projects.</p>
+    <a href="mailto:matt@mattginn.me" class="button button--border">Shoot me an email</a>
   </div>
+  <section class="footer-links">
+    <ul class="nav nav--center">
+      <li><a href="http://twitter.com/mginn_">Twitter</a></li>
+      <li><a href="skype:m.ginn?add">Skype</a></li>
+      <li><a href="http://github.com/mattginn">Github</a></li>
+    </ul>
+  </section>
 </div>
+
+<script>
+
+  document.addEventListener('mousemove', function(e) {
+    var x = e.pageX / 100 * 4;
+    var y = e.pageY / 100 * 4;
+    var elem = document.getElementById('one');
+
+    elem.style.WebkitTransform = 'translate3d(-' + x + 'px, -' + y + 'px, 0)';
+    elem.style.Transform = 'translate3d(-' + x + 'px, -' + y + 'px, 0)';
+
+  });
+
+  document.addEventListener('scroll', function() {
+    var logo = document.getElementById('contone');
+    var y = -50 + Math.abs(window.scrollY / 100 * 20);
+
+    logo.style.WebkitTransform = 'translate3d(-50%, ' + y + '%, 0)';
+    logo.style.Transform = 'translate3d(-50%, ' + y + '%, 0)';
+  });
+
+
+
+</script>
+
+</body>
+</html>

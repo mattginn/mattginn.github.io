@@ -1,0 +1,70 @@
+// ===
+//
+// Menu
+//
+// ===
+
+
+.menu--checkbox
+  position: absolute
+  visibility: hidden
+  left: -9999px
+
+.menu--icon
+  width: 20px
+  height: 14px
+  position: fixed
+  top: 20px
+  left: 20px
+  padding: 0
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  z-index: 50
+
+  @include vendor(transition, 0.2s)
+  @include vendor(transition-delay, 0.15s)
+
+  i
+    display: block
+    text-indent: 100%
+    overflow: hidden
+    white-space: nowrap
+    height: 2px
+    background-color: #dadada
+    width: 100%
+    position: absolute
+    top: 50%
+    @include vendor(transition, 0.3s)
+    @include vendor(transition-delay, 0.2s)
+
+  &:before, &:after
+    content: ''
+    position: absolute
+    top: 0
+    height: 0
+    border-bottom: 2px solid #dadada
+    width: 100%
+    left: 0
+    right: 0
+    @include vendor(transition, .5s cubic-bezier(0.680, -0.550, 0.265, 1.550))
+    // @include vendor(transition, .5s cubic-bezier(0.680, 0, 0.265, 0))
+    @include vendor(transform-origin, right bottom)
+
+  &:after
+    top: 100%
+    @include vendor(transform-origin, right bottom)
+
+.menu--checkbox
+  &:checked
+    + .menu--icon
+      @include vendor(transform, translate3d(0, 0, 0))
+      @include vendor(transition-delay, 0.2s)
+
+      i
+        opacity: 0
+        @include vendor(transition-delay, 0)
+
+      &:after
+        @include vendor(transform, rotate3d(0, 0, 1, 45deg) translate3d(-1px, 1px, 0))
+
+      &:before
+        @include vendor(transform, rotate3d(0, 0, 1, -45deg) translate3d(0, 0, 0))
