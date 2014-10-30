@@ -1,3 +1,3 @@
 [submodule "clients/x/sm"]
 	path = clients/x/sm
-	url = /Users/mattginn/Sites/SM
+	url = https://github.com/mattginn/sm.git
