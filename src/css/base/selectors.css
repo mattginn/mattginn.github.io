@@ -1,0 +1,5 @@
+@custom-selector --heading h1, h2, h3, h4, h5, h6;
+
+@custom-media --retina (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi);
+@custom-media --mobile (max-width: 650px);
+@custom-media --mobileplus (min-width: 651px);

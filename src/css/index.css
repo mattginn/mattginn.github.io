@@ -1,0 +1,131 @@
+@import "base/variables";
+
+@import "base/selectors";
+
+/**
+ * Reset
+ */
+
+html {
+  height: 100%;
+  font: var(--site-font);
+  text-transform: uppercase;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  color: var(--text-color);
+}
+
+html, body, --heading, div, section, header, footer, main, aside {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100%;
+}
+
+main, aside {
+  display: block;
+}
+
+img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+--heading {
+  font-family: 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, serif;
+  line-height: 1.5;
+  margin: 0;
+  font-weight: 600;
+  text-transform: lowercase;
+}
+
+a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+/**
+ * Base
+ */
+
+body {
+  background: var(--sitebg);
+}
+
+.flex-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.site-wrap {
+  max-width: var(--site-max-width);
+  padding: 40px 80px;
+}
+
+.site-content {
+  padding: calc(var(--spacer) * 2) 0;
+}
+
+
+/**
+ * Imports
+ */
+
+@import "components/Button";
+@import "components/Header";
+@import "components/Logo";
+@import "components/Social";
+@import "components/Work";
+@import "components/Sidebar";
+@import "components/Page";
+@import "partials/contact";
+@import "page/home";
+
+
+/**
+ * Miscellaneous
+ */
+
+hr {
+  margin: 40px 0;
+  border: 0;
+  border-bottom: 1px solid #222429;
+}
+
+.available {
+  color: var(--green);
+}
+
+.unavailable {
+  color: var(--red);
+}
+
+
+/**
+ * Mobile
+ */
+
+@media(--mobile) {
+  .site-wrap {
+    max-width: 100%;
+    padding: 0;
+  }
+}

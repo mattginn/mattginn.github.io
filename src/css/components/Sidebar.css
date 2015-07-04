@@ -1,0 +1,183 @@
+/**
+ * Sidebar.css
+ *
+ * for <Sidebar />
+ */
+
+
+/**
+ * Sidebar Base
+ */
+
+.Sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--sidebar-bg);
+  width: 100%;
+  max-width: 700px;
+  padding: 100px 100px 50px;
+  transform: translate3d(calc(100% - 100px), 0, 0);
+  transition: transform 0.3s 0s ease;
+  z-index: 20;
+}
+
+.Sidebar__wrap {
+  cursor: pointer;
+}
+
+.Sidebar__content p {
+  margin-bottom: var(--spacer);
+}
+
+.Sidebar__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--overlay-bg);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s 0s linear;
+}
+
+
+/**
+ * Sidebar content
+ */
+
+.Sidebar__title {
+  font-size: 40px;
+  color: var(--white);
+  margin-bottom: var(--spacer);
+}
+
+
+/**
+ * Sidebar Toggle Button
+ */
+
+.Sidebar__toggle {
+  width: 20px;
+  height: 14px;
+  position: absolute;
+  top: 60px;
+  left: 40px;
+  background: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  transition: 0.2s;
+}
+
+.Sidebar__toggle span {
+  display: block;
+  text-indent: -9999px;
+  overflow: hidden;
+  height: 2px;
+  white-space: nowrap;
+  background-color: var(--white);
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transition: 0.3s;
+  transition-delay: 0.2s;
+}
+
+.Sidebar__toggle:before,
+.Sidebar__toggle:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 0;
+  border-bottom: 2px solid var(--white);
+  width: 100%;
+  left: 0;
+  right: 0;
+  transition: 0.5s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+  transform-origin: right bottom;
+}
+
+.Sidebar__toggle:after {
+  top: 100%;
+}
+
+
+/**
+ * Sidebar toggle button hover
+ */
+
+.Sidebar__toggle:not(.active):hover:before,
+.Sidebar__wrap:not(.Sidebar__open):hover .Sidebar__toggle:before {
+  width: 75%;
+  transform: rotate3d(0,0,1,-45deg) translate3d(-5px,5px,0);
+  transform-origin: left bottom;
+}
+
+.Sidebar__toggle:not(.active):hover:after,
+.Sidebar__wrap:not(.Sidebar__open):hover .Sidebar__toggle:after {
+  width: 75%;
+  transform: rotate3d(0,0,1,45deg) translate3d(-6px,-5px,0);
+  transform-origin: left bottom;
+}
+
+
+/**
+ * Sidebar Open
+ */
+
+.Sidebar__open {
+  cursor: auto;
+}
+
+.Sidebar__open .Sidebar__toggle {
+  transform: translate3d(0,0,0);
+  transition-delay: 0.2s;
+  left: 100px;
+}
+
+.Sidebar__open .Sidebar__toggle span {
+  opacity: 0;
+  transition-delay: 0;
+}
+
+.Sidebar__open .Sidebar__toggle:after {
+  transform: rotate3d(0,0,1,45deg) translate3d(-1px,1px,0);
+}
+
+.Sidebar__open .Sidebar__toggle:before {
+  transform: rotate3d(0,0,1,-45deg) translate3d(0,0,0);
+}
+
+.Sidebar__open .Sidebar {
+  transform: translate3d(0, 0, 0);
+  overflow-y: auto;
+}
+
+.Sidebar__open .Sidebar__overlay {
+  opacity: 1;
+  z-index: 10;
+}
+
+
+/**
+ * Media Queries
+ */
+
+@media(--mobile) {
+  .Sidebar {
+    width: 100%;
+    max-width: 100%;
+    padding: 50px 10px;
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none
+  }
+
+  .Sidebar__toggle {
+    display: none;
+  }
+
+}

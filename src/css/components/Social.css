@@ -1,0 +1,66 @@
+/**
+ * Social.css
+ *
+ * for <Social />
+ */
+
+.Social {
+  list-style: none;
+}
+
+.Social li {
+  font-size: 0;
+  color: var(--white);
+}
+
+.Social li:not(:last-child) {
+  margin-bottom: var(--spacer);
+}
+
+.Social a {
+  font-size: 13px;
+  color: inherit;
+  transition: 0.2s;
+}
+
+.Social span {
+  vertical-align: middle;
+}
+
+.Social .fa {
+  margin-right: 10px;
+  font-size: 1.6em;
+  line-height: 0.75em;
+}
+
+a[href*=dribbble] .fa-dribbble {
+  color: var(--dribbble-brand);
+}
+
+a[href*=dribbble]:hover {
+  color: var(--dribbble-brand);
+}
+
+a[href*=twitter] .fa-twitter {
+  color: var(--twitter-brand);
+}
+
+a[href*=twitter]:hover {
+  color: var(--twitter-brand);
+}
+
+a[href*=github] .fa-github {
+  color: var(--github-brand);
+}
+
+a[href*=github]:hover {
+  color: var(--github-brand);
+}
+
+a[href*=skype] .fa-skype {
+  color: var(--skype-brand);
+}
+
+a[href*=skype]:hover {
+  color: var(--skype-brand);
+}

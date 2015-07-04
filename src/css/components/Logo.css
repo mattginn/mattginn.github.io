@@ -1,0 +1,33 @@
+/**
+ * Logo.css
+ *
+ * for <Logo />
+ */
+
+.Logo {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 40px;
+}
+
+.Logo:before {
+  content: "";
+  display: inline-block;
+  width: 41px;
+  height: 21px;
+  background: url(/dist/img/logo.png) no-repeat;
+  background-size: 41px 21px;
+  margin-right: 20px;
+  vertical-align: middle;
+}
+
+
+@media(--mobile) {
+  .Logo {
+    font-size: 30px;
+  }
+
+  .Logo:before {
+    margin-right: 10px;
+  }
+}

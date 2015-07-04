@@ -1,0 +1,20 @@
+:root {
+  --fullheight: 100vh;
+  --sitebg: #1D1F24;
+  --site-max-width: 600px;
+  --spacer: 20px;
+  --site-font: 300 14px/1.5  Exo, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --white: #fff;
+  --text-color: #9fa3ab;
+  --sidebar-bg: #17191D;
+  --overlay-bg: rgba(23, 25, 29, 0.8);
+  --green: #329e46;
+  --red: #f55640;
+  --orange: #F1651C;
+
+  --twitter-brand: #55acee;
+  --dribbble-brand: #ea4c89;
+  --github-brand: #4183c4;
+  --skype-brand: #00aff0;
+}

@@ -1,0 +1,89 @@
+/**
+ * Contact
+ */
+
+.contact__wrap {
+  display: flex;
+  align-items: space-between;
+  margin-top: var(--spacer);
+}
+
+.contact__wrap address {
+  font-style: normal;
+  color: var(--white);
+}
+
+.contact__wrap address a:hover {
+  text-decoration: underline;
+}
+
+.contact__wrap p {
+  margin-bottom: 0;
+}
+
+.contact__header {
+  margin-bottom: var(--spacer);
+}
+
+.contact__header --heading {
+  font-family: Exo, "Helvetica Neue", Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.contact__name {
+  font-size: 14px;
+  color: var(--white);
+}
+
+.contact__role {
+  font-size: 12px;
+  color: var(--text-color);
+}
+
+.contact__section:first-child {
+  flex: 1;
+}
+
+.contact__section:last-child {
+  align-self: flex-end;
+}
+
+.contact-button {
+  background: #212428;
+  padding: 20px 25px 18px;
+  font-size: 13px;
+  color: var(--white);
+}
+
+.contact-button:hover {
+  background: linear-gradient(-135deg, #ffbf14, #ff8314, #ff5114, #ff3014);
+  background-size: 400% 400%;
+  animation: animateContactButton 3s ease infinite;
+  animation-direction: both;
+}
+
+@keyframes animateContactButton {
+  0% { background-position: 0% 40% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 40% }
+}
+
+
+@media(--mobile) {
+  .contact__wrap {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .contact__section {
+    width: 100%;
+  }
+  .contact__section:last-child {
+    margin-top: var(--spacer);
+    align-self: flex-start;
+  }
+  .contact-button {
+    width: 100%;
+    display: block;
+  }
+}

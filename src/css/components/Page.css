@@ -1,0 +1,16 @@
+/**
+ * Page.css
+ *
+ * for <Page />
+ */
+
+
+.Page {
+  padding-left: 20px;
+}
+
+@media(--mobile) {
+  .Page {
+    padding: 0 10px;
+  }
+}

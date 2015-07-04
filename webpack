@@ -1,0 +1,50 @@
+var Extractor = require('extract-text-webpack-plugin');
+
+module.exports = {
+  entry: [
+    './src/css/index.css',
+    './src/index.js'
+  ],
+
+  output: {
+    path: __dirname + '/dist',
+    filename: "bundle.js"
+  },
+
+  resolve: {
+    root: [
+      __dirname + '/src'
+    ]
+  },
+
+  extensions: [
+    '', '.js', '.jsx', '.css'
+  ],
+
+  module: {
+    loaders: [
+      {
+        test: /\.jsx?$/,
+        loader: 'babel'
+      },
+      {
+        test: /\.css$/,
+        loader: Extractor.extract('style', 'css!cssnext')
+      }
+    ]
+  },
+
+  plugins: [
+    new Extractor('bundle.css')
+  ],
+
+  cssnext: {
+    features: {
+      import: {
+        path: [
+          'src/css'
+        ]
+      }
+    }
+  }
+};
