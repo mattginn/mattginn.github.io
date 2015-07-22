@@ -6,12 +6,16 @@ export default React.createClass({
   handleClick(e) {
     e.preventDefault();
     let {props} = this;
+    var eventName = props.children + " button";
+    var action = props.action ? props.action : "";
 
     if(props.href) {
       window.location.href = props.href;
     } else {
       props.onClick()
     }
+
+    ga('send', 'event', action, eventName, props.href);
   },
 
   render() {

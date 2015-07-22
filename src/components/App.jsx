@@ -50,7 +50,7 @@ export default React.createClass({
               </address>
             </div>
             <div className="contact__section">
-              <Button href={"mailto:" + data.info.email} className="contact-button">Shoot me an email</Button>
+              <Button href={"mailto:" + data.info.email} className="contact-button" action="Email">Shoot me an email</Button>
             </div>
           </div>
           <hr />
