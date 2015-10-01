@@ -44,7 +44,17 @@ data.clients = {
       logo: "/img/socialmist-logo.png",
       url: "//socialmist.com",
       icon: "/img/socialmist-folio-icon.png",
-      link: true
+      link: true,
+      visible: true
+    },
+    {
+      name: "Switch Place",
+      description: "House swapping innovation",
+      role: "UI Developer",
+      url: "//switchplace.co",
+      icon: "/img/switchplace-folio-icon.png",
+      link: true,
+      visible: true
     },
     {
       name: "MW Ventures",
@@ -53,7 +63,8 @@ data.clients = {
       logo: "/img/mwventures-logo.png",
       url: "//mwventures.co",
       icon: "/img/mwventures-folio-icon.png",
-      link: true
+      link: true,
+      visible: true
     },
     {
       name: "Cafe Stallbacken",
@@ -62,7 +73,17 @@ data.clients = {
       logo: "/img/stallbacken-logo.png",
       url: "//cafestallbacken.se",
       icon: "/img/stallbacken-folio-icon.png",
-      link: true
+      link: true,
+      visible: true
+    },
+    {
+      name: "ZoFlyNow",
+      description: "Backend applications",
+      role: "Front end Development",
+      url: "//zoflynow.com",
+      icon: "/img/zoflynow-folio-icon.png",
+      link: true,
+      visible: true
     },
     {
       name: "Pilot Pod",
@@ -71,7 +92,8 @@ data.clients = {
       logo: "/img/pilotpod-logo.png",
       url: "//pilotpod.co.uk",
       icon: "/img/pilotpod-folio-icon.png",
-      link: false
+      link: false,
+      visible: false
     }
   ]
 };
