@@ -59,7 +59,7 @@ data.clients = {
     {
       name: "MW Ventures",
       description: "Digital Web Agency",
-      role: "UI Developer",
+      role: "Front end Developer",
       logo: "/img/mwventures-logo.png",
       url: "//mwventures.co",
       icon: "/img/mwventures-folio-icon.png",
@@ -69,7 +69,7 @@ data.clients = {
     {
       name: "Cafe Stallbacken",
       description: "Café & Restaurant",
-      role: "UI Design & Development",
+      role: "Design & Development",
       logo: "/img/stallbacken-logo.png",
       url: "//cafestallbacken.se",
       icon: "/img/stallbacken-folio-icon.png",
