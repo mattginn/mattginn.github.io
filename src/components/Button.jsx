@@ -24,9 +24,9 @@ export default React.createClass({
     var c = cl + props.className;
 
     return(
-      <button href={props.href} className={c} onClick={this.handleClick}>
+      <a href={props.href} className={c} onClick={this.handleClick}>
         {props.children}
-      </button>
+      </a>
     )
   }
 });
