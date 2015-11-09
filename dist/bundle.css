@@ -88,8 +88,7 @@ body {
 }
 
 .site-wrap {
-  max-width: 600px;
-  padding: 40px 80px;
+  padding: 40px 120px 40px 80px;
 }
 
 .site-content {
@@ -256,8 +255,18 @@ a[href*=skype]:hover {
 
 .Work {
   padding: 20px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 
+.Work__item {
+  width: 50%;
+}
 
 .Work__icon {
   width: 58px;
@@ -282,8 +291,6 @@ a[href*=skype]:hover {
   color: #9fa3ab;
 }
 
-
-
 .Work__name {
   position: relative;
 }
@@ -299,7 +306,6 @@ a[href*=skype]:hover {
   position: relative;
   margin: 0 5px;
 }
-
 
 .Work__item__content {
   padding-left: 20px;
@@ -377,6 +383,22 @@ a[href*=skype]:hover {
     width: calc(100% + 20px);
     margin-left: -10px;
     padding: 10px 0;
+  }
+
+}
+
+@media(max-width: 768px) {
+
+  .Work {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .Work__item {
+    width: 100%;
   }
 
 }
@@ -722,8 +744,8 @@ a[href*=skype]:hover {
             align-self: flex-start;
   }
   .contact-button {
-    width: 100%;
     display: block;
+    text-align: center;
   }
 }
 /**

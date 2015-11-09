@@ -83,7 +83,7 @@
     align-self: flex-start;
   }
   .contact-button {
-    width: 100%;
     display: block;
+    text-align: center;
   }
 }

@@ -76,8 +76,7 @@ body {
 }
 
 .site-wrap {
-  max-width: var(--site-max-width);
-  padding: 40px 80px;
+  padding: 40px 120px 40px 80px;
 }
 
 .site-content {
