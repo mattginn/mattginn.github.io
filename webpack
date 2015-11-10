@@ -1,3 +1,4 @@
+var webpack = require('webpack');
 var Extractor = require('extract-text-webpack-plugin');
 
 module.exports = {
@@ -30,13 +31,16 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: Extractor.extract('style-loader', 'css-loader?minimize!cssnext')
+        loader: Extractor.extract('style-loader', 'css!cssnext')
       }
     ]
   },
 
   plugins: [
-    new Extractor('bundle.css')
+    new Extractor('bundle.css'),
+    new webpack.optimize.UglifyJsPlugin({
+      minimize: true}
+    )
   ],
 
   cssnext: {
