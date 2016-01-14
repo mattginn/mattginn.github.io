@@ -80,7 +80,7 @@ data.clients = {
       name: "ZoFlyNow",
       description: "Backend applications",
       role: "Front end Development",
-      url: "//zoflynow.com",
+      url: "//zoflynow.azurewebsites.net/",
       icon: "/img/zoflynow-folio-icon.png",
       link: true,
       visible: true
@@ -92,8 +92,8 @@ data.clients = {
       logo: "/img/pilotpod-logo.png",
       url: "//pilotpod.co.uk",
       icon: "/img/pilotpod-folio-icon.png",
-      link: false,
-      visible: false
+      link: true,
+      visible: true
     }
   ]
 };
