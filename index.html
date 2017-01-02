@@ -43,17 +43,18 @@
     div {
       display: table-cell;
       vertical-align: bottom;
-      padding: 0 1em 4.375em 5em;
+      padding: 0 1em 4.375em 1em;
+      text-align: center;
     }
     header {
       margin-bottom: 30px;
     }
     h1 {
-      font-size: 2.875em;
+      font-size: 2em;
       margin: 0;
     }
     h2 {
-      font-size: 1.25em;
+      font-size: 1.1em;
       font-weight: 300;
       margin: 0;
     }
@@ -73,15 +74,21 @@
     [href*=github]:hover {
       color: #4078c0;
     }
+    nav {
+      text-align: center;
+    }
     nav a {
       vertical-align: middle;
       margin-right: 35px;
+    }
+    nav a:last-child {
+      margin-right: 0;
     }
     nav a.btn-outline {
       margin-right: 25px;
     }
     .btn-outline {
-      width: 140px;
+      width: 100%;
       padding-top: 6px;
       padding-bottom: 8px;
       border-radius: 42px;
@@ -89,6 +96,31 @@
       color: #0000FF;
       text-align: center;
       display: inline-block;
+      margin-bottom: 20px;
+    }
+    @media only screen and (max-width: 499px) {
+      .sm-up {
+        display: none;
+      }
+    }
+    @media only screen and (min-width: 500px) {
+      h1 {
+        font-size: 2.875em;
+      }
+      h2 {
+        font-size: 1.25em;
+      }
+      div {
+        padding: 0 1em 4.375em 5em;
+        text-align: left;
+      }
+      .btn-outline {
+        width: 140px;
+        margin-bottom: 0;
+      }
+      nav {
+        text-align: left;
+      }
     }
   </style>
 
@@ -99,7 +131,7 @@
     <header>
       <h1>Hi. I’m Matt Ginn</h1>
       <h2>
-        A front end developer from Torquay, England.<br/>
+        A front end developer from Torquay, England.<br class="sm-up"/>
         I design and develop websites and web applications.
       </h2>
     </header>
