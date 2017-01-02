@@ -1,33 +1,115 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Matt Ginn &mdash; Freelance Front-end developer | Available for new projects</title>
-    <meta name="description" content="Freelance front-end developer based in Torquay, United Kingdom. I am currently available for new projects.">
-    <link href='http://fonts.googleapis.com/css?family=Exo:300,500' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="dist/bundle.css" />
-  </head>
-  <body class="flex-wrap">
-    <!--
-         __    __     ______     ______   ______   ______     ______     _____     ______     ______
-        /\ "-./  \   /\  __ \   /\__  _\ /\__  _\ /\  ___\   /\  __ \   /\  __-.  /\  ___\   /\  ___\
-        \ \ \-./\ \  \ \  __ \  \/_/\ \/ \/_/\ \/ \ \ \____  \ \ \/\ \  \ \ \/\ \ \ \  __\   \ \___  \
-         \ \_\ \ \_\  \ \_\ \_\    \ \_\    \ \_\  \ \_____\  \ \_____\  \ \____-  \ \_____\  \/\_____\
-          \/_/  \/_/   \/_/\/_/     \/_/     \/_/   \/_____/   \/_____/   \/____/   \/_____/   \/_____/
+<html>
+<head>
 
-    -->
-    <script src="dist/bundle.js"></script>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  <title>Matt Ginn | matt.codes - Front Web Development, Strategy, Reviews, Architecture</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
 
-      ga('create', 'UA-65413523-1', 'auto');
-      ga('send', 'pageview');
+  <style>
+    @font-face {
+      font-family: 'HKG';
+      src: url('fonts/hkgrotesk-regular-web.woff2') format('woff2'),
+           url('fonts/hkgrotesk-regular-web.woff') format('woff'),
+           url('fonts/hkgrotesk-regular-web.ttf') format('truetype');
+      font-weight: normal;
+    }
+    @font-face {
+      font-family: 'HKG';
+      src: url('fonts/hkgrotesk-bold-web.woff2') format('woff2'),
+           url('fonts/hkgrotesk-bold-web.woff') format('woff'),
+           url('fonts/hkgrotesk-bold-web.ttf') format('truetype');
+      font-weight: bold;
+    }
+    @font-face {
+      font-family: 'HKG';
+      src: url('fonts/hkgrotesk-light-web.woff2') format('woff2'),
+           url('fonts/hkgrotesk-light-web.woff') format('woff'),
+           url('fonts/hkgrotesk-light-web.ttf') format('truetype');
+      font-weight: 300;
+    }
+    html {
+      height: 100%;
+      font-family: HKG, Helvetica, sans-serif;
+      color: #484848;
+      font-size: 100%;
+      -webkit-font-smoothing: antialiased;
+    }
+    body {
+      margin: 0;
+      display: table;
+      height: 100%;
+      width: 100%;
+    }
+    div {
+      display: table-cell;
+      vertical-align: bottom;
+      padding: 0 1em 4.375em 5em;
+    }
+    header {
+      margin-bottom: 30px;
+    }
+    h1 {
+      font-size: 2.875em;
+      margin: 0;
+    }
+    h2 {
+      font-size: 1.25em;
+      font-weight: 300;
+      margin: 0;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    a:hover {
+      color: #0000FF;
+    }
+    [href*=twitter]:hover {
+      color: #1da1f2;
+    }
+    [href*=dribbble]:hover {
+      color: #ea4c89;
+    }
+    [href*=github]:hover {
+      color: #4078c0;
+    }
+    nav a {
+      vertical-align: middle;
+      margin-right: 35px;
+    }
+    nav a.btn-outline {
+      margin-right: 25px;
+    }
+    .btn-outline {
+      width: 140px;
+      padding-top: 6px;
+      padding-bottom: 8px;
+      border-radius: 42px;
+      border: 2px solid #C5C5C5;
+      color: #0000FF;
+      text-align: center;
+      display: inline-block;
+    }
+  </style>
 
-    </script>
-  </body>
+</head>
+<body>
+
+  <div>
+    <header>
+      <h1>Hi. I’m Matt Ginn</h1>
+      <h2>
+        A front end developer from Torquay, England.<br/>
+        I design and develop websites and web applications.
+      </h2>
+    </header>
+    <nav>
+      <a href="mailto:hi@matt.codes" class="btn-outline">Email</a>
+      <a href="//twitter.com/_mginn">Twitter</a>
+      <a href="//github.com/mattginn">Github</a>
+      <a href="//dribbble.com/mattginn">Dribbble</a>
+    </nav>
+  </div>
+
+</body>
 </html>
